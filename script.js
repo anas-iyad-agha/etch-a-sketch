@@ -20,9 +20,31 @@ var changeDimensionsButton = document.querySelector(
 );
 
 changeDimensionsButton.addEventListener("click", () => {
-  var newRows = prompt("enter rows (max is 100):");
+  var newRows;
 
-  var newColumns = prompt("enter columns (max is 100):");
+  while (true) {
+    newRows = prompt("enter rows (max is 100):");
+    if (!isNaN(newRows) && Number(newRows) <= 100 && Number(newRows) > 0) {
+      break;
+    } else {
+      alert("Please enter a valid number");
+    }
+  }
+
+  var newColumns;
+
+  while (true) {
+    newColumns = prompt("enter columns (max is 100):");
+    if (
+      !isNaN(newColumns) &&
+      Number(newColumns) <= 100 &&
+      Number(newColumns) > 0
+    ) {
+      break;
+    } else {
+      alert("Please enter a valid number");
+    }
+  }
 
   rows = newRows;
   columns = newColumns;
