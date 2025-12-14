@@ -4,7 +4,7 @@
 }
 
 #grid-container{
-    margin: 12rem auto;
+    margin: 12rem auto 1rem auto;
     display: flex;
     flex-wrap: wrap;
     max-width: 960px;
@@ -15,4 +15,12 @@
     height: 38px;
     border: 1px solid gray;
     background-color: azure;
+}
+
+#change-dimensions-button{
+    padding: 6px;
+    border-radius: 16px;
+    display: flex;
+    font-size: 2rem;
+    margin: auto;
 }
